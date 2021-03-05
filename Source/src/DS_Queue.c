@@ -1,10 +1,11 @@
-/*
- * Queue_Func.c
- *
- *  Created on: 03-Mar-2021
- *  Author: atul.thakare001
- */
-#include "Queue_Func.h"
+/**********************************************************
+ *  File Name:	DS_Queue.c
+ *  Created on: 05-Mar-2021
+ *  Author: 	Atul.thakare001
+ ***********************************************************/
+
+#include "DS_Queue.h"
+#include "RandomGen.h"
 
 QueType* fGenerateQue(StdRet_Type* ptr_retVal ,uint16 Lus_Capacity)
 {
@@ -158,4 +159,19 @@ StdRet_Type fIsQueueFull(QueType* ptr_Que)
 
 	}
 	return (retVal);
+}
+
+void fFillQue(QueType* lptr_Que)
+{
+	uint32 itr;
+	StdRet_Type retVal;
+	for (itr =0 ;itr < lptr_Que->LusCapacity;itr++)
+	{
+		retVal = fEnqueElement(lptr_Que,getRandomNum(GBL_RAND_MIN,GBL_RAND_MAX));
+		if(retVal == E_FULL)
+		{
+			break;
+		}
+	}
+	printf("Queue is filled");
 }

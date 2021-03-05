@@ -4,23 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/Queue_Func.c \
-../src/main.c 
+../TestApplication/src/TestApp_Queue.c 
 
 OBJS += \
-./src/Queue_Func.o \
-./src/main.o 
+./TestApplication/src/TestApp_Queue.o 
 
 C_DEPS += \
-./src/Queue_Func.d \
-./src/main.d 
+./TestApplication/src/TestApp_Queue.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.c
+TestApplication/src/%.o: ../TestApplication/src/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
-	gcc -I"/mnt/D032FB4732FB3158/Coding/EclipesWrkspace/DataStructure_Queue/inc" -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	gcc -I"/mnt/D032FB4732FB3158/Coding/EclipesWrkspace/DataStructures/Main/inc" -I"/mnt/D032FB4732FB3158/Coding/EclipesWrkspace/DataStructures/Source/inc" -I"/mnt/D032FB4732FB3158/Coding/EclipesWrkspace/DataStructures/TestApplication/inc" -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

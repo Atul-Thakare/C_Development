@@ -1,12 +1,11 @@
-/*
- * Queue_Func.h
- *
- *  Created on: 03-Mar-2021
- *  Author: atul.thakare001
- */
+/**********************************************************
+ *  File Name:	DS_Queue.h
+ *  Created on: 05-Mar-2021
+ *  Author: 	Atul.thakare001
+ ***********************************************************/
 
-#ifndef INC_QUEUE_FUNC_H_
-#define INC_QUEUE_FUNC_H_
+#ifndef SOURCE_INC_DS_QUEUE_H_
+#define SOURCE_INC_DS_QUEUE_H_
 
 
 #include "Common_Def.h"
@@ -28,6 +27,7 @@ extern StdRet_Type fPeekLastElement(QueType* ptr_Que,sint32* ptr_LsiElement);
 extern StdRet_Type fIsQueueEmpty(QueType* ptr_Que);
 extern StdRet_Type fIsQueueFull(QueType* ptr_Que);
 extern void fPrintQueElements(QueType* ptr_Que);
+extern void fFillQue(QueType* lptr_Que);
 
 
-#endif /* INC_QUEUE_FUNC_H_ */
+#endif /* SOURCE_INC_DS_QUEUE_H_ */
