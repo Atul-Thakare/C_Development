@@ -8,6 +8,11 @@
 #ifndef INC_COMMON_DEF_H_
 #define INC_COMMON_DEF_H_
 
+#include <stdlib.h>
+#include <stdio.h>
+
+#define NULL_PTR (void*)0
+
 typedef unsigned char uint8;
 typedef signed char sint8;
 
